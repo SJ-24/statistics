@@ -1,5 +1,2 @@
 # hello-world
-Just study
-
-
-wo shi shijie
+Who is shijie
