@@ -1,0 +1,31 @@
+---
+title: "Untitled"
+author: "Shijie Yuan"
+date: "2024-02-13"
+output: html_document
+---
+
+# Chernoff Bounds
+## Theorem (Chernoff Bound for Gaussians)
+Let \(X_i \sim N(\mu, \sigma^2)\) be independent random variables. Let \(X := \sum_i X_i\). $$\Pr(X/n - \mu \geq t) \leq e^{-\frac{nt^2}{2\sigma^2}}$$
+
+Proof.
+$$
+\begin{aligned}
+\Pr(X/n - \mu \geq t) = & \Pr(e^{\lambda(X - n\mu)} \geq e^{n\lambda t})\\
+\leq & \inf_{\lambda \geq 0} e^{-n\lambda t} E\left[e^{\lambda(X - n\mu)}\right]\\
+= & \inf_{\lambda \geq 0} e^{-n\lambda t} \prod_iE\left[e^{\lambda(X_i - \mu)}\right]\\
+= & \inf_{\lambda \geq 0} e^{-n\lambda t+ \frac{n\sigma^2\lambda^2}{2}}, \qquad \text{since } E\left[e^{\lambda X_i}\right] = e^{\lambda\mu + \frac{\sigma^2\lambda^2}{2}}.\\
+= & e^{-\frac{nt^2}{2\sigma^2}}, \qquad \text{since } \lambda = \frac{t}{\sigma^2} \text{ minimizes this}.\\
+\end{aligned}
+$$
+
+## Theorem (Chernoff Bound for Bernoullis)
+
+# Hoeffding's Lemma
+
+# Sub-Gaussian Random Variables
+
+Definition.
+\(X\) is sub-gaussian with parameter \(\sigma^2\) if, for all \(\lambda \in \mathbb{R}\),
+$$\log M_{X-\mu}(\lambda) \leq \frac{\lambda^2\sigma^2}{2}, \text{ where } M_{X-\mu}(\lambda) = E\left[e^{\lambda(X-\mu)}\right].$$

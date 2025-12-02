@@ -41,11 +41,15 @@
 </header>
 
 <main>
-    <section id="chapter1" class="chapter">
-        <h2><a href="math_stat/index.html">Math Statistics</a></h2>
-        <p>This is the content of Chapter 1.</p>
-        <!-- Add more content here -->
-    </section>
+    <h1>Chernoff Bounds</h1>
+    <p>Let \(X_i \sim N(\mu, \sigma^2)\) be independent random variables. Let \(X := \sum_i X_i\). $$\Pr(X/n - \mu \geq t) \leq e^{-\frac{nt^2}{2\sigma^2}}$$</p>
+    <p>Proof.</p>
+    <p>$$\Pr(X/n - \mu \geq t) = \Pr(e^{\lambda(X - n\mu)} \geq e^{n\lambdat})$$</p>
+    <p>Consider \(X_i, i = 1, \cdots, N\), follow a distribution with PDF \(f(x \mid \theta)\). 
+        Hence, the likelihood function is \(L(\theta) = \prod_{i=1}^N f(x_i \mid \theta)\).
+        The score function \(s(\theta) = \frac{\partial}{\partial\theta}\log L(\theta)\).</p>
+    <p>Let \(\theta_0\) denote the true value of \(\theta\). We have $$s(\theta_0) \sim N(0,I(\theta_0)),$$ where \(I(\cdot)\) represents the Fisher Information. </p>
+    <p>This is a displayed formula: $$\int_{a}^{b} x^2 dx$$</p>
 
     <section id="chapter1" class="chapter">
         <h2><a href="the_stat/index.html">Theoretical Statistics</a></h2>
